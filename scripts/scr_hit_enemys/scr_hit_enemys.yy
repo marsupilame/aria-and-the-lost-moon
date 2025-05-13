@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_hit_enemys",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_hit_enemys",
+  "parent":{
+    "name":"enemys",
+    "path":"folders/Scripts/enemys.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
