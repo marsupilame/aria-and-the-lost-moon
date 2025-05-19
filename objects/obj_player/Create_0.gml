@@ -1,5 +1,4 @@
 #region variables
-state=player_state_idle
 hsp=0
 vsp=0
 spd=2.5
@@ -12,6 +11,22 @@ lado=0
 comecouataque=false
 obj_atingidos=ds_list_create()
 gamepad=false
+hit=0
+hp=40
+state=PLAYER.IDLE
+cool=60
+enum PLAYER{
+	ATTACK_SLASH,
+	WALKING_KEY,
+	WALKING_CON,
+	INAIR,
+	IDLE,
+	SHOOTING,
+	ATTACK_INAIR,
+	ATTACK_COMBO,
+	AGACHADO,
+	SUBINDOESCADAFODA
+}
 #endregion
 #region save go to
 if global.playergotox!=0{

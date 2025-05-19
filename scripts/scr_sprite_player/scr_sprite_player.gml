@@ -2,7 +2,7 @@ function scr_sprite_player(){
 if hsp>0{lado=0}
 if hsp<0{lado=1}
 switch state{
-	case player_state_moving_controle:
+	case PLAYER.WALKING_CON:
 		if lado=0{
 			image_xscale=1
 		}
@@ -15,7 +15,7 @@ switch state{
 		}
 	break
 	
-		case player_state_moving_teclado:
+		case PLAYER.WALKING_KEY:
 		if lado=0{
 			image_xscale=1
 		}
@@ -28,8 +28,8 @@ switch state{
 		}
 	break
 	
-	case player_state_idle: sprite_index=spr_player_idle break
-	case player_state_inair: 
+	case PLAYER.IDLE: sprite_index=spr_player_idle break
+	case PLAYER.INAIR: 
 		sprite_index=spr_player_inair
 		if lado=0{
 			image_xscale=1
@@ -38,7 +38,9 @@ switch state{
 			image_xscale=-1
 		}
 	break
-	case player_state_attack_slash:  break
-	case player_state_attack_combo: break
+	case PLAYER.ATTACK_SLASH: sprite_index=spr_player_ataque break
+	case PLAYER.ATTACK_COMBO: break
+	case PLAYER.SUBINDOESCADAFODA: sprite_index=spr_player_subindo break
+	case PLAYER.AGACHADO: sprite_index=spr_player_agachado break
 }
 }

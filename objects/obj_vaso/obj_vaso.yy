@@ -9,7 +9,10 @@
     "name":"objetos quebraveis",
     "path":"folders/Objetos/objetos quebraveis.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_objetos_quebravis",
+    "path":"objects/obj_objetos_quebravis/obj_objetos_quebravis.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_vaso",
+    "path":"sprites/spr_vaso/spr_vaso.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -8,8 +8,8 @@
   "name":"obj_var_global",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"gui things",
+    "path":"folders/Objetos/gui things.yy",
   },
   "parentObjectId":null,
   "persistent":false,
