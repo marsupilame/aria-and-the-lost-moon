@@ -28,16 +28,6 @@ if place_meeting(x+hsp,y,obj_block){
 	}
 	hsp=0
 }
-
-
-if place_meeting(x+hsp,y,obj_teto){
-	while !place_meeting(x+sign(hsp),y,obj_teto){
-		x+=sign(hsp)
-	}
-	hsp=0
-}
-
-
 if state!=PLAYER.SUBINDOESCADAFODA{
 x+=hsp
 if pulou=false && keyboard_check(ord("A")){
@@ -46,23 +36,18 @@ if pulou=false && keyboard_check(ord("A")){
 	vsp+=grav
 }
 }
+var pre_vsp=vsp
 if place_meeting(x,y+vsp,obj_block){
 	while !place_meeting(x,y+sign(vsp),obj_block){
 		y+=sign(vsp)
 	}
-	vsp=0
-	pulou=false
+	vsp =0
+	if pre_vsp>0{ pulou=false}
 }else{
 	pulou=true
 }
 
 
-if place_meeting(x,y+vsp,obj_teto){
-	while !place_meeting(x,y+sign(vsp),obj_teto){
-		y+=sign(vsp)
-	}
-	vsp=0
-}
 
 if state=PLAYER.SUBINDOESCADAFODA{
 if !keyboard_check(vk_down){
@@ -72,4 +57,5 @@ if place_meeting(x,y+vsp,obj_escada)and vsp>0{
 }}
 
 y+=vsp
+if move!=0{image_xscale=move}
 }

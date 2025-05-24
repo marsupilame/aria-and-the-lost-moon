@@ -9,8 +9,8 @@
   "name":"obj_safe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"weapons pickups",
+    "path":"folders/Objetos/weapons pickups.yy",
   },
   "parentObjectId":null,
   "persistent":false,

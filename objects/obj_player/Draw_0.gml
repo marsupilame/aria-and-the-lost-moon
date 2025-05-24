@@ -1,3 +1,5 @@
 draw_self()
 draw_set_font(Font2)
 draw_text(x,y-20,state)
+draw_text(x,y-40,weapons_equipados)
+draw_text(x,y,dano)

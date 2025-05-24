@@ -8,7 +8,8 @@ if obj_player.comecouataque=false{
 //tira os dados da lista inimigos atingidos
 ds_list_clear(obj_player.inimigos_atingidos)
 //a colisão vira a colisão de ataque logo ele bate kk
-mask_index=spr_player_ataque_collision
+if weapons_equipados="Espadão"{
+mask_index=spr_player_ataque_collision}else{mask_index=spr_player_ataque_2_collision}
 //cria uma lista dos objetos inimigos acertados agora
 var acertado_agora=ds_list_create()
 //cria uma lista dos objetos quebraveis acertados
@@ -29,7 +30,10 @@ if hits > 0{
 			ds_list_add(obj_player.inimigos_atingidos,hitid)
 			//da 2 de dano
 			with (hitid){
-				scr_hit_enemys(2)
+				var _equi=obj_player.weapons_equipados
+				switch _equi{case "Punho": 	scr_hit_enemys(1) break
+					case "Pedaço de Pau": scr_hit_enemys(2) break
+					case "Espadão": scr_hit_enemys(4) break}
 			}
 		}
 	}
@@ -72,7 +76,7 @@ if hits > 0{
 		if ds_list_find_index(obj_player.inimigos_atingidos,hitid) == -1 and hitid.hit=0{
 			ds_list_add(obj_player.inimigos_atingidos,hitid)
 			with (hitid){
-				scr_hit_enemys(2)
+				scr_hit_enemys(dano)
 			}
 		}
 	}

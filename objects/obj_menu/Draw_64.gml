@@ -9,6 +9,6 @@ for (var i = 0;i<op_max;i++){
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
 	if index=i{sprite=spr_button_selected}else{sprite=spr_button}
-	draw_sprite(sprite,0,x1,y2)
-	draw_text(x1,y2,options[i])
+	if room=Inventario_3{ draw_sprite(sprite,0,x1,y2+375)}else{draw_sprite(sprite,0,x1,y2)}
+	if room=Inventario_3{draw_text(x1,y2+375,options[i])}else{draw_text(x1,y2,options[i])}
 }
